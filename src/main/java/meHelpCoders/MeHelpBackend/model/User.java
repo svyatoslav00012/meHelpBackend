@@ -2,10 +2,8 @@ package meHelpCoders.MeHelpBackend.model;
 
 import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.List;
 
 @Data
 @Entity
@@ -33,5 +31,11 @@ public class User {
 
     @Column(name="adress")
     private String adress;
+
+    @ManyToMany
+    private List<CallForHelp> callForHelpList;
+    
+    @ManyToMany
+    private List<ReadyToHelpRequest> readyToHelpRequestList;
 
 }
