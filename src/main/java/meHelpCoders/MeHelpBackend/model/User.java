@@ -1,6 +1,7 @@
 package meHelpCoders.MeHelpBackend.model;
 
 import lombok.Data;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import javax.persistence.*;
 import java.util.List;
@@ -8,6 +9,7 @@ import java.util.List;
 @Data
 @Entity
 @Table(name="user")
+@Document(collection = "Users")
 public class User {
 
     @Id
@@ -38,4 +40,7 @@ public class User {
     @ManyToMany
     private List<ReadyToHelpRequest> readyToHelpRequestList;
 
+    public String getId() {
+        return id;
+    }
 }
