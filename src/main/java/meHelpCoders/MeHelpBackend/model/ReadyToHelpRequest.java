@@ -1,15 +1,15 @@
 package meHelpCoders.MeHelpBackend.model;
 
 import lombok.Data;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.List;
 
 @Data
 @Entity
 @Table(name="readyToHelpRequest")
+@Document(collection="ReadyToHelpRequest")
 public class ReadyToHelpRequest {
 
     @Id
@@ -36,4 +36,7 @@ public class ReadyToHelpRequest {
 
     @Column(name="status")
     private String status;
+
+    @ManyToMany
+    private List<User> userList;
 }
