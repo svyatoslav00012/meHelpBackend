@@ -1,15 +1,14 @@
 package meHelpCoders.MeHelpBackend.controllers;
 
-import org.springframework.http.RequestEntity;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+@Controller
 public class MainController {
 
     @GetMapping("/")
-    public String getMainPage(){
-        return "Main page will be here";
+    public String getMainPage() {
+        return "index";
     }
 
 }
