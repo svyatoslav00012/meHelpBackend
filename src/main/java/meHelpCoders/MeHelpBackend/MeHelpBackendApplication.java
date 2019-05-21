@@ -8,6 +8,7 @@ public class MeHelpBackendApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(MeHelpBackendApplication.class, args);
+
 	}
 
 }
