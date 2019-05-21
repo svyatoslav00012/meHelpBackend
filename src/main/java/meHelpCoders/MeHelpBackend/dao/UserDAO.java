@@ -7,4 +7,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface UserDAO extends MongoRepository<User, String> {
+    public User findByUsername(String username);
 }

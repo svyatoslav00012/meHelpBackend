@@ -13,25 +13,12 @@ import java.util.List;
 public class User {
 
     @Id
-    @Column(name="id")
-    private String id;
-
-    @Column(name="email")
+    private Long id;
     private String email;
-
-    @Column(name="username")
     private String username;
-
-    @Column(name="password")
     private String password;
-
-    @Column(name="firstName")
     private String firstName;
-
-    @Column(name="lastName")
     private String lastName;
-
-    @Column(name="adress")
     private String adress;
 
     @ManyToMany
@@ -40,7 +27,4 @@ public class User {
     @ManyToMany
     private List<ReadyToHelpRequest> readyToHelpRequestList;
 
-    public String getId() {
-        return id;
-    }
 }
